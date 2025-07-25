@@ -9,6 +9,9 @@
   },
   "scripts": {
     "start": "vite",
-    "build": "vite build"
+    "build": "vite build",
+	"dev": "vite",
+    "preview": "vite preview"
   }
+  
 }

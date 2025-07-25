@@ -1,70 +1,128 @@
+# 🏏 CricketMind - Strategy Maker App
 
-# 🏏 CricketMind - Smart Cricket Strategy App
-
-CricketMind is a cross-platform web app designed to create, visualize, and manage cricket bowling strategies intelligently using pitch maps, field setup, ball types, and animations.
-
-## 🚀 Features
-
-### 🧠 Strategy Engine
-- Dynamic delivery type detection (spin, swing, pace, etc.)
-- Shot recommendation based on delivery
-- Fielding suggestions for each delivery
-- Ball types: Red/White leather, Tennis, Tape, etc.
-
-### 🎨 Frontend (React + Tailwind)
-- Mobile-first layout
-- Interactive pitch & field maps
-- Animation previews using Lottie
-- Role-based access (Admin/User)
-- Fully responsive
-
-### ⚙️ Backend (FastAPI + PostgreSQL)
-- Strategy API
-- Authentication (JWT + OTP)
-- Admin panel setup
-- REST endpoints for strategy input/output
-
-### 📱 Mobile Optimization
-- Designed to work across devices
-- Optional PWA / Native app wrapper using Capacitor
-
-## 🧪 Testing
-- Unit & E2E tests with edge validations
-- Strategy rendering test cases
-- Field/batting logic checks
-
-## 📦 Stack
-
-| Layer      | Tech                         |
-|------------|------------------------------|
-| Frontend   | React, TailwindCSS, Lottie   |
-| Backend    | Python, FastAPI, PostgreSQL  |
-| Auth       | JWT, OTP                     |
-| Hosting    | Vercel (Frontend), TBD (Backend) |
-
-## 🛠️ Run Locally
-
-```bash
-# Frontend
-cd frontend
-npm install
-npm run dev
-
-# Backend
-cd backend
-pip install -r requirements.txt
-uvicorn main:app --reload
-```
-
-## 📤 Deployment
-
-- Web hosted on [Vercel](https://vercel.com/)
-- Backend will be deployed on Render / Railway
-
-## 🙌 Contributing
-
-PRs welcome! Please fork the repo, create a branch, and submit pull requests.
+CricketMind is a web-based app that helps cricket coaches and players plan and visualize strategies by selecting ball types, pitch lengths, field setups, and more.
 
 ---
 
-© 2025 CricketMind Team | MIT License
+## 🌐 Tech Stack
+
+- **Frontend**: React + Vite + TailwindCSS + Lottie
+- **Backend**: Python + FastAPI
+- **Database**: SQLite (via SQLAlchemy)
+- **Auth**: JWT-based authentication with OTP flow for mobile
+- **Deployment**: GitHub + Vercel (Frontend), PythonAnywhere (Backend)
+- **Mobile**: Responsive Layout (PWA-ready)
+
+---
+
+## 🚀 Local Setup Instructions
+
+### 🔧 Backend Setup (Python + FastAPI)
+
+```bash
+cd backend
+
+# Create a virtual environment
+python -m venv venv
+
+# Activate virtual environment
+# On Unix/macOS:
+source venv/bin/activate
+# On Windows:
+venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run FastAPI server
+uvicorn main:app --reload
+```
+
+Once running, the backend will be available at: `http://localhost:8000`
+
+---
+
+### 💻 Frontend Setup (React + Vite)
+
+```bash
+cd frontend
+
+# Install dependencies
+npm install
+
+# Check scripts in package.json
+# Ensure it has:
+# "scripts": {
+#   "dev": "vite",
+#   "build": "vite build",
+#   "preview": "vite preview"
+# }
+
+# Run development server
+npm run dev
+```
+
+Frontend will be available at: `http://localhost:5173`
+
+---
+
+## ✅ Features
+
+- Choose ball type: Red, White, Tape, Tennis, etc.
+- Select pitch map length (full, good, short)
+- Animated Lottie previews for each delivery
+- Fielding strategies with visual overlays
+- Role-based access for Admin/Users
+- Strategy knowledge base and filters
+- JWT-based login flow with OTP support
+
+---
+
+## 📁 Folder Structure
+
+```
+CricketMind/
+├── backend/
+│   ├── main.py
+│   ├── models/
+│   ├── routes/
+│   ├── services/
+│   └── requirements.txt
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   ├── package.json
+│   └── vite.config.js
+└── README.md
+```
+
+---
+
+## 🧪 Testing
+
+We’ve included end-to-end and edge-case tests using Pytest and React Testing Library.
+
+```bash
+# Backend
+cd backend
+pytest
+
+# Frontend (if test config added)
+npm test
+```
+
+---
+
+## 📲 Mobile Support
+
+- Fully responsive layout
+- Optimized for Android/iOS via PWA standards
+- Mobile login via OTP
+
+---
+
+## 📬 Contact & Contribution
+
+Feel free to fork, contribute, or raise issues. For feature requests, open an issue on GitHub.
+
+---
