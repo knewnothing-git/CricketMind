@@ -1,110 +1,70 @@
-# 🏏 CricketMind: AI-powered Cricket Strategy Maker
 
-CricketMind is a web and mobile-friendly application designed to help players, coaches, and enthusiasts create, simulate, and understand cricket strategies for different ball types, match situations, and field placements.
+# 🏏 CricketMind - Smart Cricket Strategy App
 
----
+CricketMind is a cross-platform web app designed to create, visualize, and manage cricket bowling strategies intelligently using pitch maps, field setup, ball types, and animations.
 
-## 🔥 Features
+## 🚀 Features
 
-### 🧠 Strategy Generator
-- Ball type input: Spin, Fast, Medium, Tape, Tennis, Leather (Red/White)
-- Pitch location input: Full length, Good length, Short, Yorker, Overpitched, etc.
-- Dynamic suggestions:
-  - For bowlers: Ideal pitch zones, expected result
-  - For batters: Shot type, ideal hitting area
+### 🧠 Strategy Engine
+- Dynamic delivery type detection (spin, swing, pace, etc.)
+- Shot recommendation based on delivery
+- Fielding suggestions for each delivery
+- Ball types: Red/White leather, Tennis, Tape, etc.
 
-### 🗺️ Pitch Map & Zone Graphics
-- Interactive pitch with visual markers
-- Area-based insights (Overpitched, Bouncer, Wide Yorkers, etc.)
+### 🎨 Frontend (React + Tailwind)
+- Mobile-first layout
+- Interactive pitch & field maps
+- Animation previews using Lottie
+- Role-based access (Admin/User)
+- Fully responsive
 
-### 🧤 Field Setup Suggestions
-- Adaptive field setup by delivery type & match phase (Powerplay, Middle Overs, Death Overs)
-- Dynamic zone mapping: slips, covers, fine leg, etc.
+### ⚙️ Backend (FastAPI + PostgreSQL)
+- Strategy API
+- Authentication (JWT + OTP)
+- Admin panel setup
+- REST endpoints for strategy input/output
 
-### 🎬 Strategy Animation
-- Lottie-powered animations
-- Explanation of delivery-to-shot conversion
+### 📱 Mobile Optimization
+- Designed to work across devices
+- Optional PWA / Native app wrapper using Capacitor
 
-### 🔐 Role-Based Access
-- Admin panel for managing strategies
-- JWT-authenticated users
-- Mobile OTP login system
+## 🧪 Testing
+- Unit & E2E tests with edge validations
+- Strategy rendering test cases
+- Field/batting logic checks
 
----
+## 📦 Stack
 
-## ⚙️ Tech Stack
+| Layer      | Tech                         |
+|------------|------------------------------|
+| Frontend   | React, TailwindCSS, Lottie   |
+| Backend    | Python, FastAPI, PostgreSQL  |
+| Auth       | JWT, OTP                     |
+| Hosting    | Vercel (Frontend), TBD (Backend) |
 
-### Frontend
-- React + Tailwind CSS
-- Vite
-- Lottie for animations
+## 🛠️ Run Locally
 
-### Backend
-- Python + FastAPI
-- SQLite/PostgreSQL (selectable)
-- JWT-based authentication
-
-### DevOps
-- GitHub Actions (CI-ready)
-- Fully containerizable (Docker-ready optional)
-
----
-
-## 🚀 Getting Started
-
-### 1. Clone the repo
 ```bash
-git clone https://github.com/knewnothing-git/CricketMind.git
-cd CricketMind
-```
+# Frontend
+cd frontend
+npm install
+npm run dev
 
-### 2. Start Backend
-```bash
+# Backend
 cd backend
-python3 -m venv venv
-source venv/bin/activate
 pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
-### 3. Start Frontend
-```bash
-cd frontend
-npm install
-npm run dev
-```
+## 📤 Deployment
+
+- Web hosted on [Vercel](https://vercel.com/)
+- Backend will be deployed on Render / Railway
+
+## 🙌 Contributing
+
+PRs welcome! Please fork the repo, create a branch, and submit pull requests.
 
 ---
 
-## ✅ Project Progress Checklist
-
-- [x] UI Wireframe (Mobile-first)
-- [x] React Frontend
-- [x] Backend with FastAPI
-- [x] Auth (JWT, OTP)
-- [x] Strategy Generator
-- [x] Pitch Map Zones
-- [x] Field Placement Logic
-- [x] Lottie Animation Integration
-- [x] Admin Dashboard
-- [x] Mobile Optimization
-- [x] Strategy Submission Form
-- [ ] Cloud Deployment
-
----
-
-## 🧪 Coming Soon
-- AI-enhanced delivery prediction engine
-- Upload ball videos for strategy suggestions
-- Player-level data insights (pro vs amateur)
-
----
-
-## 📄 License
-MIT License
-
----
-
-## 🙌 Contribute
-Open to contributions, suggestions, and collaborations. Just raise an issue or submit a PR!
-
+© 2025 CricketMind Team | MIT License
